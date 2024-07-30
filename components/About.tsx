@@ -13,7 +13,7 @@ const About = () => {
       <div className="flex flex-col lgl:flex-row gap-16">
         <div className="w-full lgl:w-2/3 text-base text-textDark font-medium flex flex-col gap-4">
           <p>
-          Hello, my name is Giri Sejati Nugraha, commonly known as Apang. Currently, 
+          Hi There!, My name is Giri Sejati Nugraha, commonly known as Apang. Currently, 
           I reside in Cimahi City and am a Informatics Engineering student at STMIK Mardira Indonesia. 
           </p>
           <p>
