@@ -91,10 +91,10 @@ const Navbar = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.2, delay: 0.3, ease: "easeIn" }}
                 >
-                  Education
+                  Education & Experience
                 </motion.li>
               </Link>
-            <Link
+            {/*<Link
               className="flex items-center gap-1 font-medium text-textDark hover:text-yellow-500 cursor-pointer duration-300 nav-link"
               href="#experience"
               onClick={handleScroll}
@@ -106,7 +106,7 @@ const Navbar = () => {
               >
                 Experience
               </motion.li>
-            </Link>
+            </Link>*/}
             <Link
               className="flex items-center gap-1 font-medium text-textDark hover:text-yellow-500 cursor-pointer duration-300 nav-link"
               href="#project"
@@ -209,10 +209,10 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.3, ease: "easeIn" }}
                     >
-                      Education
+                      Education & Experience
                     </motion.li>
                   </Link>
-                  <Link
+                 {/*===== <Link
                     className="flex items-center gap-1 font-medium text-textDark hover:text-yellow-500 cursor-pointer duration-300 nav-link"
                     href="#experience"
                     onClick={handleScroll}
@@ -224,7 +224,7 @@ const Navbar = () => {
                     >
                       Experience
                     </motion.li>
-                  </Link>
+                  </Link>*/}
                   <Link
                     className="flex items-center gap-1 font-medium text-textDark hover:text-yellow-500 cursor-pointer duration-300 nav-link"
                     href="#project"
