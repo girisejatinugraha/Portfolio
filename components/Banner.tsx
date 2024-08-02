@@ -1,46 +1,54 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import { useInView } from 'react-intersection-observer';
+
 const Banner = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,  
+    threshold: 0.1  
+  });
+
   return (
     <section
+      ref={ref}
       id="home"
       className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
     >
       <motion.h3
         initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.5, delay: 0.6 }}
         className="text-lg font-titleFont tracking-wide text-yellow-500"
       >
-       Hi There!, My name is
+        Hi There!, My name is
       </motion.h3>
       <motion.h1
-        initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        initial={{ y: -20, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.7, delay: 0.7 }}
         className="text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col"
       >
         Giri Sejati Nugraha.
       </motion.h1>
       <motion.p
-        initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
+        initial={{ x: -30, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.6, delay: 0.8 }}
         className="text-base md:max-w-[650px] text-textDark font-medium"
       >
-        Informatics Engineering Students at STMIK Mardira Indonesia| Data Analyst & Scientist | Web Developer.{" "}
-        <br/>
-          <a href="mailto:girisejatinugraha@gmail.com" target="_blank">
-          {" "}
+        Informatics Engineering Student at STMIK Mardira Indonesia | Data Analyst & Scientist | Web Developer.
+        <br />
+        <a href="mailto:girisejatinugraha@gmail.com" target="_blank" rel="noopener noreferrer">
           <span className="text-yellow-500 inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
             Hire Me
             <span className="absolute w-full h-[1px] bg-yellow-500 left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
           </span>
         </a>
       </motion.p>
-      <a href="https://github.com/girisejatinugraha" target="_blank">
+      <a href="https://github.com/girisejatinugraha" target="_blank" rel="noopener noreferrer">
         <motion.button
           initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.9 }}
           className="w-52 h-14 text-sm font-titleFont border border-yellow-500 rounded-md text-yellow-500 tracking-wide hover:bg-hoverColor duration-300"
         >

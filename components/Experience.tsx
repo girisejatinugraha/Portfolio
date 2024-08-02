@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 import Amazon from "./works/Amazon";
 import Apple from "./works/Apple";
@@ -8,52 +9,15 @@ import Splash from "./works/Splash";
 
 const Experience = () => {
   const [workMBL, setWorkMBL] = useState(true);
-    {/*========= 
-  const [workGoogle, setWorkGoogle] = useState(false);
-  const [workApple, setWorkApple] = useState(false);
-  const [workSplash, setWorkSplash] = useState(false);
-  const [workAmazon, setWorkAmazon] = useState(false); 
-  */}
+  // Define refs for animation
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: false });
 
   const handleMBL = () => {
     setWorkMBL(true);
-      {/*========= 
-    setWorkGoogle(false);
-    setWorkApple(false);
-    setWorkSplash(false);
-    setWorkAmazon(false); */}
+    // Handle other state updates if needed
   };
 
-    {/*========= 
-  const handleGoogle = () => {
-    setWorkMBL(false);
-    setWorkGoogle(true);
-    setWorkApple(false);
-    setWorkSplash(false);
-    setWorkAmazon(false);
-  };
-
-  const handleApple = () => {
-    setWorkMBL(false);
-    setWorkGoogle(false);
-    setWorkApple(true);
-    setWorkSplash(false);
-    setWorkAmazon(false);
-  };
-  const handleSplash = () => {
-    setWorkMBL(false);
-    setWorkGoogle(false);
-    setWorkApple(false);
-    setWorkSplash(true);
-    setWorkAmazon(false);
-  };
-  const handleAmazon = () => {
-    setWorkMBL(false);
-    setWorkGoogle(false);
-    setWorkApple(false);
-    setWorkSplash(false);
-    setWorkAmazon(true);
-  };*/}
   return (
     <section
       id="experience"
@@ -61,24 +25,31 @@ const Experience = () => {
     >
       <SectionTitle title="Experience" titleNo="02" />
       <div className="w-full mt-10 flex flex-col md:flex-row gap-16">
-        <ul className="md:w-32 flex flex-col">
+        <motion.ul
+          ref={ref}
+          initial={{ x: -20, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : { x: -20, opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="md:w-32 flex flex-col"
+        >
           <li
             onClick={handleMBL}
             className={`${
               workMBL
                 ? "border-l-yellow-500 text-yellow-500"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
-          MBL
+            MBL
           </li>
-     {/*=========    <li
+          {/* Uncomment the following code to add more items */}
+          {/* <li
             onClick={handleGoogle}
             className={`${
               workGoogle
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
             Google
           </li>
@@ -88,7 +59,7 @@ const Experience = () => {
               workApple
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
             Apple
           </li>
@@ -98,7 +69,7 @@ const Experience = () => {
               workSplash
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
             Splash
           </li>
@@ -108,18 +79,23 @@ const Experience = () => {
               workAmazon
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
             Amazon
-          </li>*/}  
-        </ul>
-        {workMBL && <MBL />}
-        {/*========= 
-        {workGoogle && <Google />}
-        {workApple && <Apple />}
-        {workSplash && <Splash />}
-        {workAmazon && <Amazon />}
-        */}
+          </li> */}
+        </motion.ul>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          {workMBL && <MBL />}
+          {/* Uncomment the following code to add more components */}
+          {/* {workGoogle && <Google />}
+          {workApple && <Apple />}
+          {workSplash && <Splash />}
+          {workAmazon && <Amazon />} */}
+        </motion.div>
       </div>
     </section>
   );
