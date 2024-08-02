@@ -47,6 +47,12 @@ const MBL = () => {
           </span>
           Communicating with parents of students.
         </li>
+        <li className="text-base flex gap-2 text-textDark">
+          <span className="text-yellow-500 mt-1">
+            <TiArrowForward />
+          </span>
+          Skills: Microsoft Office, Communication, Problem Solving, Time Management.
+        </li>
       </ul>
     </motion.div>
   );

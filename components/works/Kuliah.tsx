@@ -29,6 +29,12 @@ const Kuliah = () => {
           </span>
           Relevant Coursework: Application Program Package, Algorithm & Programming, Web Programming I & II, Database Systems, Information System Analysis, Statistics.
         </li>
+        <li className="text-base flex gap-2 text-textDark">
+          <span className="text-yellow-500 mt-1">
+            <TiArrowForward />
+          </span>
+          Skills: HTML, CSS, JavaScript, PHP, Laravel, SQL, Python, Microsoft Office.
+        </li>
       </ul>
     </motion.div>
   );
