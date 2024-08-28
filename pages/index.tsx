@@ -11,6 +11,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import Archive from "@/components/Archive";
 import Education from "@/components/Education";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
             <About />
             <Education />
             <Experience />
+            <Skills />
             <Projects />
             <Contact />
             <Footer />

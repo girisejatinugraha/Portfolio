@@ -21,7 +21,7 @@ const Kuliah = () => {
           <span className="text-yellow-500 mt-1">
             <TiArrowForward />
           </span>
-          GPA: 3.52
+          GPA: 3.61
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-yellow-500 mt-1">
@@ -33,7 +33,7 @@ const Kuliah = () => {
           <span className="text-yellow-500 mt-1">
             <TiArrowForward />
           </span>
-          Skills: HTML, CSS, JavaScript, PHP, Laravel, SQL, Python, Microsoft Office.
+          Skills: HTML, CSS, JavaScript, PHP, Laravel, SQL, Python, Git, Github, Microsoft Office.
         </li>
       </ul>
     </motion.div>

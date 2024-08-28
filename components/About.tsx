@@ -37,60 +37,9 @@ const About = () => {
             challenges, and create innovative solutions. I possess strong
             communication skills and easily adapt to new things.
           </p>
-          <p>Personal Skills:</p>
-          <p>1. Hard Skills:</p>
-          <p>• Data Analyst & Scientist:</p>
-          <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">
-            {["Microsoft Excel", "Tableau", "SQL", "Python", "R", "Data Visualization"].map(
-              (skill, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <span className="text-yellow-500">
-                    <AiFillThunderbolt />
-                  </span>
-                  {skill}
-                </li>
-              )
-            )}
-          </ul>
-          <p>• Web Developer:</p>
-          <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">
-            {["HTML", "CSS & SCSS", "Tailwind CSS", "JavaScript", "PHP", "Laravel", "React.Js", "GatsbyJS"].map(
-              (skill, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <span className="text-yellow-500">
-                    <AiFillThunderbolt />
-                  </span>
-                  {skill}
-                </li>
-              )
-            )}
-          </ul>
-          <p>2. Soft Skills:</p>
-          <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">
-            {["Communication", "Critical Thinking", "Problem Solving", "Attention to detail", "Research"].map(
-              (skill, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <span className="text-yellow-500">
-                    <AiFillThunderbolt />
-                  </span>
-                  {skill}
-                </li>
-              )
-            )}
-          </ul>
-          <p>3. Other Skills:</p>
-          <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">
-            {["Git", "GitHub"].map(
-              (skill, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <span className="text-yellow-500">
-                    <AiFillThunderbolt />
-                  </span>
-                  {skill}
-                </li>
-              )
-            )}
-          </ul>
+          <p className="text-justify">
+            You can reach me via email at <a href="mailto:girisejatinugraha@gmail.com" className="text-yellow-500 hover:underline">girisejatinugraha@gmail.com</a>.
+            </p>
         </motion.div>
         <motion.div
           ref={ref2}

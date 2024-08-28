@@ -23,6 +23,7 @@ const Contact = () => {
       >
         If you have any questions or just want to say hello, I will do my best to reply to you!
       </motion.p>
+      <div className="flex space-x-4">
       <motion.a
         href="mailto:girisejatinugraha@gmail.com"
         initial={{ opacity: 0, y: 50 }}
@@ -33,6 +34,17 @@ const Contact = () => {
           Email
         </button>
       </motion.a>
+      <motion.a
+        href="https://wa.me/6282115623877"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <button className="w-40 h-14 border border-yellow-500 mt-6 font-titleFont text-sm text-yellow-500 tracking-wider rounded-md hover:bg-hoverColor duration-300">
+        WhatsApp
+        </button>
+      </motion.a>
+      </div>
     </section>
   );
 };

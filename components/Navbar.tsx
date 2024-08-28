@@ -91,12 +91,12 @@ const Navbar = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.2, delay: 0.3, ease: "easeIn" }}
                 >
-                  Education & Experience
+                  Qualifications
                 </motion.li>
               </Link>
-            {/*<Link
+            <Link
               className="flex items-center gap-1 font-medium text-textDark hover:text-yellow-500 cursor-pointer duration-300 nav-link"
-              href="#experience"
+              href="#skills"
               onClick={handleScroll}
             >
               <motion.li
@@ -104,9 +104,9 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.2 }}
               >
-                Experience
+                Skills
               </motion.li>
-            </Link>*/}
+            </Link>
             <Link
               className="flex items-center gap-1 font-medium text-textDark hover:text-yellow-500 cursor-pointer duration-300 nav-link"
               href="#project"
@@ -117,7 +117,7 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.3 }}
               >
-                Project
+                Projects
               </motion.li>
             </Link>
             <Link
@@ -209,12 +209,12 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.3, ease: "easeIn" }}
                     >
-                      Education & Experience
+                      Qualifications
                     </motion.li>
                   </Link>
-                 {/*===== <Link
+                 <Link
                     className="flex items-center gap-1 font-medium text-textDark hover:text-yellow-500 cursor-pointer duration-300 nav-link"
-                    href="#experience"
+                    href="#skills"
                     onClick={handleScroll}
                   >
                     <motion.li
@@ -222,9 +222,9 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.3, ease: "easeIn" }}
                     >
-                      Experience
+                      Skills
                     </motion.li>
-                  </Link>*/}
+                  </Link>
                   <Link
                     className="flex items-center gap-1 font-medium text-textDark hover:text-yellow-500 cursor-pointer duration-300 nav-link"
                     href="#project"
@@ -235,7 +235,7 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.4, ease: "easeIn" }}
                     >
-                      Project
+                      Projects
                     </motion.li>
                   </Link>
                   <Link
