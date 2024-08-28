@@ -47,8 +47,10 @@ const Skills = () => {
       <SectionTitle title="Personal Skills" titleNo="" />
       <div ref={refHardSkills} className="flex flex-col lgl:flex-row gap-16">
         {Object.keys(skillsData.hardSkills).map((category, categoryIndex) => {
+          // Check if the category exists in skillsData.hardSkills
           const skills = skillsData.hardSkills[category];
-
+          
+          // Ensure skills is an array
           if (!Array.isArray(skills)) {
             console.error(`Expected an array but received: ${skills}`);
             return null;
