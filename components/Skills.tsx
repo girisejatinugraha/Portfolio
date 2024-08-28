@@ -36,7 +36,8 @@ const skillsData = {
 };
 
 const Skills = () => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref: refHardSkills, inView: inViewHardSkills } = useInView({ triggerOnce: true });
+  const { ref: refSoftSkills, inView: inViewSoftSkills } = useInView({ triggerOnce: true });
 
   return (
     <section
@@ -44,9 +45,10 @@ const Skills = () => {
       className="max-w-containerSmall mx-auto py-10 lgl:py-32 flex flex-col gap-8"
     >
       <SectionTitle title="Personal Skills" titleNo="" />
-      <div ref={ref} className="flex flex-col lgl:flex-row gap-16">
+      <div ref={refHardSkills} className="flex flex-col lgl:flex-row gap-16">
         {Object.keys(skillsData.hardSkills).map((category, categoryIndex) => {
           const skills = skillsData.hardSkills[category];
+
           if (!Array.isArray(skills)) {
             console.error(`Expected an array but received: ${skills}`);
             return null;
@@ -55,7 +57,7 @@ const Skills = () => {
             <motion.div
               key={categoryIndex}
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              animate={inViewHardSkills ? { opacity: 1, y: 0 } : {}}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="w-full lgl:w-1/2"
@@ -66,7 +68,7 @@ const Skills = () => {
                   <motion.li
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    animate={inViewHardSkills ? { opacity: 1, y: 0 } : {}}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
                     className="flex items-center gap-2 text-sm font-medium"
@@ -80,8 +82,9 @@ const Skills = () => {
           );
         })}
         <motion.div
+          ref={refSoftSkills}
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inViewSoftSkills ? { opacity: 1, y: 0 } : {}}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="w-full lgl:w-1/2 mt-8 lgl:mt-0"
@@ -92,7 +95,7 @@ const Skills = () => {
               <motion.li
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
+                animate={inViewSoftSkills ? { opacity: 1, y: 0 } : {}}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="flex items-center gap-2 text-sm font-medium"
