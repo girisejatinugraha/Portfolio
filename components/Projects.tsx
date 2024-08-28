@@ -189,7 +189,11 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right z-10">
             <div>
             <p className="font-titleFont text-yellow-500 text-sm tracking-wide">
+<<<<<<< HEAD
                 Projects 6
+=======
+                Project 6
+>>>>>>> bcb588fc16db5e8f0cb48f35e2bc04414b6f0ced
               </p>
               <h3 className="text-2xl font-bold">Dashboard-E-Commerce</h3>
               <h6 className="text-0xl">Apr 2024 - Apr 2024</h6>
