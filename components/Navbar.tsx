@@ -117,7 +117,7 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.3 }}
               >
-                Projects
+                Project
               </motion.li>
             </Link>
             <Link
@@ -235,7 +235,7 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.4, ease: "easeIn" }}
                     >
-                      Projects
+                      Project
                     </motion.li>
                   </Link>
                   <Link

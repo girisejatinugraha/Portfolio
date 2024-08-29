@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <section id="project" className="max-w-container mx-auto lgl:px-20 py-24">
-      <SectionTitle title="Some Projects I Have Created" titleNo=""/>
+      <SectionTitle title="Some Project I Have Created" titleNo=""/>
       <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
         <motion.div className="flex flex-col xl:flex-row gap-6" initial="hidden" whileInView="visible" variants={projectVariants} viewport={{ once: true }}>
           <a className="w-full xl:w-1/2 h-auto relative group">
@@ -24,7 +24,7 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-end text-right xl:-ml-16 z-10">
             <div>
               <p className="font-titleFont text-yellow-500 text-sm tracking-wide">
-                 Projects 1
+                 Project 1
               </p>
               <h3 className="text-2xl font-bold">Web Design Landing Page</h3>
               <h6 className="text-0xl">Nov 2022 - Nov 2022</h6>
@@ -56,7 +56,7 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right z-10">
             <div>
               <p className="font-titleFont text-yellow-500 text-sm tracking-wide">
-                Projects 2
+                Project 2
               </p>
               <h3 className="text-2xl font-bold">Student Attendance Application</h3>
               <h6 className="text-0xl">Jan 2023 - Jan 2023</h6>
@@ -90,7 +90,7 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right xl:-ml-16 z-10">
             <div>
               <p className="font-titleFont text-yellow-500 text-sm tracking-wide">
-                Projects 3 
+                Project 3 
               </p>
               <h3 className="text-2xl font-bold">Brand/Type of Television</h3>
               <h6 className="text-0xl">Mei 2023 - Mei 2023</h6>
@@ -123,7 +123,7 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right z-10">
             <div>
               <p className="font-titleFont text-yellow-500 text-sm tracking-wide">
-                Projects 4
+                Project 4
               </p>
               <h3 className="text-2xl font-bold">Library</h3>
               <h6 className="text-0xl">Jul 2023 - Jul 2023</h6>
@@ -156,7 +156,7 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right xl:-ml-16 z-10">
             <div>
               <p className="font-titleFont text-yellow-500 text-sm tracking-wide">
-                Projects 5 
+                Project 5 
               </p>
               <h3 className="text-2xl font-bold">Hotel Booking Application</h3>
               <h6 className="text-0xl">Jan 2024 - Jan 2024</h6>
@@ -189,7 +189,7 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right z-10">
             <div>
             <p className="font-titleFont text-yellow-500 text-sm tracking-wide">
-                Projects 6
+                Project 6
               </p>
               <h3 className="text-2xl font-bold">Dashboard-E-Commerce</h3>
               <h6 className="text-0xl">Apr 2024 - Apr 2024</h6>
@@ -226,7 +226,7 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right xl:-ml-16 z-10">
             <div>
               <p className="font-titleFont text-yellow-500 text-sm tracking-wide">
-                Projects 7 
+                Project 7 
               </p>
               <h3 className="text-2xl font-bold">School Website</h3>
               <h6 className="text-0xl">Jul 2024 - Jul 2024</h6>
